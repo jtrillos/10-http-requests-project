@@ -8,7 +8,7 @@ function App() {
 
   async function fetchMoviesHandler() {
     const response = await fetch("https://swapi.py4e.com/api/films/");
-    const data = response.json();
+    const data = await response.json();
 
     const transformedMovies = data.results.map((movieData) => {
       return {
